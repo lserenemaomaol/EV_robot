@@ -57,9 +57,11 @@ public class Pedometer implements Runnable  {
 	
 	public void run() {
 		
-		int N=1;
+		while(true) {
+					
+		   int N=1;
 		
-		while(N<30) {
+		   while(N<30) {
 			try{
 				BufferedReader in = new BufferedReader(new InputStreamReader(skt.getInputStream()));
 				String raw_data = in.readLine();
@@ -235,6 +237,10 @@ public class Pedometer implements Runnable  {
 			} finally {
 			}	
 		}
+	
+		}
+		
+
 
 	}
 
